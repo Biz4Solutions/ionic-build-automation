@@ -1,0 +1,56 @@
+{
+  "name": "ionic-project",
+  "version": "1.0.0",
+  "description": "An Ionic project",
+  "devDependencies": {
+    "@ionic/cli-plugin-cordova": "1.4.1",
+    "@ionic/cli-plugin-gulp": "1.0.2",
+    "@ionic/cli-plugin-ionic1": "2.0.1",
+    "cheerio": "^0.22.0",
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-angular-filesort": "^1.1.1",
+    "gulp-cached": "^1.1.0",
+    "gulp-cheerio": "^0.6.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "^3.2.2",
+    "gulp-if": "^2.0.0",
+    "gulp-inject": "^3.0.0",
+    "gulp-json-editor": "^2.2.1",
+    "gulp-load-plugins": "^1.4.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-minify-html": "^1.0.6",
+    "gulp-ng-annotate": "^2.0.0",
+    "gulp-ng-html2js": "^0.2.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-sass": "^3.1.0",
+    "gulp-strip-debug": "^1.1.0",
+    "gulp-uglify": "^1.5.3",
+    "gulp-useref": "^3.0.7",
+    "gulp-util": "^2.2.14",
+    "run-sequence": "^1.1.5",
+    "yargs": "^4.6.0"
+  },
+  "dependencies": {
+    "cordova-android": "6.3.0",
+    "cordova-ios": "^4.5.2",
+    "cordova-plugin-console": "^1.1.0",
+    "cordova-plugin-device": "^1.1.6",
+    "cordova-plugin-splashscreen": "^4.0.3"
+  },
+  "cordovaPlatforms": [
+    "ios"
+  ],
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-console": {},
+      "cordova-plugin-device": {},
+      "cordova-plugin-splashscreen": {}
+    },
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  }
+}

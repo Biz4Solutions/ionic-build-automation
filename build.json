@@ -1,0 +1,28 @@
+{
+     "ios": {
+		"debug": {
+		  "developmentTeam": "4D2334SG86"
+		},
+		"release": {
+		  "developmentTeam": "4D2334SG86",
+		  "codeSignIdentity": "iPhone Distribution",
+		  "packageType": "app-store"
+		}
+	},
+	"android": {
+        "debug": {
+            "keystore": "Foodway.keystore",
+            "storePassword": "FoodWayPassWord$50",
+            "alias": "Foodway",
+            "password" : "FoodWayPassWord$50",
+            "keystoreType": ""
+        },
+        "release": {
+            "keystore": "Foodway.keystore",
+            "storePassword": "FoodWayPassWord$50",
+            "alias": "Foodway",
+            "password" : "FoodWayPassWord$50",
+            "keystoreType": ""
+        }
+    }
+ }

@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget android-versionCode="" id="com.foodway.app" ios-CFBundleVersion="1.1.0.1" version="1.1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Food Way</name>
+    <description>The fast food delivery application</description>
+    <author email="appauthor@foodway.com" href="foodway.com">Foodway Author</author>
+    <content src="index.html" />
+    <access origin="*" />
+    <preference name="fullscreen" value="true" />
+    <preference name="webviewbounce" value="false" />
+    <preference name="UIWebViewBounce" value="false" />
+    <preference name="DisallowOverscroll" value="true" />
+    <feature name="StatusBar">
+        <param name="ios-package" onload="true" value="CDVStatusBar" />
+    </feature>
+    <engine name="ios" spec="^4.5.2" />
+    <plugin name="cordova-plugin-console" spec="^1.1.0" />
+    <plugin name="cordova-plugin-device" spec="^1.1.6" />
+    <engine name="android" spec="~6.3.0" />
+	
+	<platform name="android">
+		<preference name="android-minSdkVersion" value="19"/> <!-- Android 4.4 -->
+		<preference name="android-targetSdkVersion" value="25"/> <!-- Android 7.1 -->
+</widget>

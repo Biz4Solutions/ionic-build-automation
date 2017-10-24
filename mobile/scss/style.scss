@@ -1,0 +1,30 @@
+/* inject:scss */
+/* endinject */
+
+/* Above tags are used to import other sass files dynamically if required */
+/* Add your own CSS if you like */
+
+.dashboard {
+	background: $backgroundColor;
+	
+	.logoImage {
+		border-radius: 50px;
+		width: 90%;
+		display: block;
+		margin: 0 auto;
+		margin-top: 25px;
+	}
+	
+	h4, p {
+		display: block;
+		text-align: center;
+	}
+	
+	p {
+		font-size: 15px;
+	}
+}
+
+
+
+

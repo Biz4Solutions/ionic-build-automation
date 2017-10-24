@@ -1,0 +1,12 @@
+{
+	"appVersion" : "1.1.0",
+	"appBuildVersion" : "1.1.0.1",
+	"androidAppBuildVersion": "10001",
+	"androidAppBuildVersion" : "",
+	"appId" : "com.foodway.app",
+	"appName" : "Food Way",
+	"appDescription" : "The fast food delivery application",
+	"appAuthorEmail" : "appauthor@foodway.com",
+	"appAuthorURL": "foodway.com",
+	"appAuthor" : "Foodway Author" 
+}
