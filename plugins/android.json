@@ -1,15 +1,21 @@
 {
-  "prepare_queue": {
-    "installed": [],
-    "uninstalled": []
-  },
-  "config_munge": {
-    "files": {}
-  },
-  "installed_plugins": {
-    "cordova-plugin-splashscreen": {
-      "PACKAGE_NAME": "com.foodway.app"
-    }
-  },
-  "dependent_plugins": {}
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.foodway.app"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.foodway.app"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.foodway.app"
+        }
+    },
+    "dependent_plugins": {}
 }
