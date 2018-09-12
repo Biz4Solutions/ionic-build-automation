@@ -75,7 +75,7 @@ c.	Right click and open <Your_Provisioning_Profile_Name>.mobileprovision files i
 #### 4.	Create “build.json” file in root directory of your project
 
 a.	Content of `build.json` for XCode versions less than XCode 8. 
-i.	Search for the UUID in opened provisioning profile. Copy the hexadecimal format ID in the <string> tag following UUID and paste it to the respective places as shown in the following content.
+- Search for the UUID in opened provisioning profile. Copy the hexadecimal format ID in the <string> tag following UUID and paste it to the respective places as shown in the following content.
 ```	
 {
 	"ios": {
@@ -94,8 +94,8 @@ i.	Search for the UUID in opened provisioning profile. Copy the hexadecimal form
 
 b.	Content of build.json for XCode versions greater or equal to XCode 8
 
-i.	Search for the TeamIdentifier key in the opened files of provisioning profile. 
-ii.	Copy the alphanumeric <string> tag following the <array> tag under TeamIdentifier and paste it to respective places as shown in the following content. 
+- Search for the TeamIdentifier key in the opened files of provisioning profile. 
+- Copy the alphanumeric <string> tag following the <array> tag under TeamIdentifier and paste it to respective places as shown in the following content. 
 
 Get more details for the following content at cordova support for XCode 8 and greater.
 ```
@@ -119,9 +119,9 @@ Get more details for the following content at cordova support for XCode 8 and gr
 #### 5.	Download deliver and fastlane tools 
 
 (https://docs.fastlane.tools/getting-started/ios/setup) and set up for your project. 
-a.	Install fastlane - `sudo gem install fastlane`
-b.	Install x-code command line tool – `xcode-select --install`
-c.	Initialize fastlane and deliver - `fastlane deliver init`
+- a.	Install fastlane - `sudo gem install fastlane`
+- b.	Install x-code command line tool – `xcode-select --install`
+- c.	Initialize fastlane and deliver - `fastlane deliver init`
 
 Once you are done with this setup you will have a file in your project which should be similar to the following.
 ```
@@ -142,7 +142,7 @@ username "<Some apple developer user name>" # your Apple ID user
 
 #### 6.	Create the following bash scripts.
 
-a.	<Project_Name>_Build.sh
+##### a. <Project_Name>_Build.sh
 ```
 #!/bin/bash
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
@@ -158,7 +158,7 @@ gulp --release --iosBuild
 ▪	`cd ..` changes the directory to parent directory of bash file's directory
 ▪	`gulp --release --iosBuild` runs the build process and generates the code in 'www' directory and executes the command ionic cordova build ios which creates the ionic build for testing.
 		
-b.	<Project_Name>_IPA.sh
+##### b. <Project_Name>_IPA.sh
 ```
 #!/bin/bash
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
@@ -177,7 +177,7 @@ gulp --release --ipa
 
 ▪	It will show a notification popup once the IPA is ready or will return error if any. `--svn` flag will state if project should be updated before deploying the build.
 
-c.	<Project_Name>_Deploy.sh
+##### c. <Project_Name>_Deploy.sh
 ```
 #!/bin/bash
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
@@ -194,12 +194,12 @@ gulp --release --iosDeploy
 ▪	`DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"` denotes the directory where bash file is present.
 ▪	`cd $DIR` changes current directory to bash file's directory.
 ▪	`cd ..` changes the directory to parent directory of bash file's directory.
-▪	`gulp --release --iosDeploy` runs the build process and generates the code in 'www' directory and executes commands cordova build ios --device --release` & `fastlane deliver --ipa IPA_PATH --skip_metadata true --skip_screenshots true --force true` which create the iOS IPA file and deploy it to Testflight.
+▪	`gulp --release --iosDeploy` runs the build process and generates the code in 'www' directory and executes commands `cordova build ios --device --release` & `fastlane deliver --ipa IPA_PATH --skip_metadata true --skip_screenshots true --force true` which create the iOS IPA file and deploy it to Testflight.
 
 ▪	It will show a notification popup once the deployment is done or will return error if any. `--svn` flag will state if project should be updated before deploying the build.
 
 
-d.	<Project_Name>_Dev_Build.sh
+##### d. <Project_Name>_Dev_Build.sh
 ```
 #!/bin/bash
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
@@ -279,7 +279,7 @@ $ keytool -genkey -v -keystore my_release_key.keystore -alias alias_name -keyalg
 
 #### 5.	Create the following bat scripts.
 
-a)	<Project_Name> Android Run on Device.bat
+##### a. <Project_Name> Android Run on Device.bat
 ```
 cd /d %~dp0..
 gulp --androidRun
@@ -291,7 +291,7 @@ cmd.exe
 
 •	`gulp --androidRun` runs the build process and generates the code in 'www' directory and executes the command ionic cordova run android which runs the application on the device for debugging.
 
-b)	<Project_Name> Signed APK.bat
+##### b. <Project_Name> Signed APK.bat
 ```
 cd /d %~dp0..
 gulp --release --signedAPK
