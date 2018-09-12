@@ -118,7 +118,7 @@ Get more details for the following content at cordova support for XCode 8 and gr
 
 #### 5.	Download deliver and fastlane tools 
 
-(https://docs.fastlane.tools/getting-started/ios/setup) and set up for your project. 
+Download deliver and fastlane tools from https://docs.fastlane.tools/getting-started/ios/setup and set up for your project. 
 - a.	Install fastlane - `sudo gem install fastlane`
 - b.	Install x-code command line tool – `xcode-select --install`
 - c.	Initialize fastlane and deliver - `fastlane deliver init`
