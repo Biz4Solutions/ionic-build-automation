@@ -2,7 +2,7 @@
 
 Please go through a demo project on github before you start setting up your own project.
 
-•	You will find a demo project at github -ionicbuild automation. The demo project is presented with a complete gulpfile.js and index.html which you can refer to in your own project. 
+•	The demo project is presented with a complete gulpfile.js and index.html which you can refer to in your own project. 
 
 •	We have added details of each task in the gulpfile.js itself. After updating your own gulpfile.js, make sure that build is being generated in the www folder using “gulp” command.
 
@@ -26,14 +26,13 @@ If you are assertive with all the above resources then you are ready for further
 
 #### 1. Install gulp locally and globally
 ```
-a.	npm install gulp (Local)
-b.	npm install -g gulp (Global)
+npm install gulp (Local)
+npm install -g gulp (Global)
 ```
 
 
 #### 2. Install the following gulp plugins with --save-dev flag. 
-
-	Install all the plugins listed in the following by command npm install <plugin_name> --save-dev. When --save-dev is used, every plug-in we install will be saved in our project’s package.json file, subsequently all plugins will be installed by running npm install and there won’t be any need to install each plug-in separately.
+Install all the plugins listed in the following by command `npm install <plugin_name> --save-dev`. When `--save-dev` is used, every plug-in we install will be saved in our project’s package.json file, subsequently all plugins will be installed by running npm install and there won’t be any need to install each plug-in separately.
 
 ```
 •	del 			// for deleting files and folders
@@ -75,7 +74,7 @@ c.	Right click and open <Your_Provisioning_Profile_Name>.mobileprovision files i
 
 #### 4.	Create “build.json” file in root directory of your project
 
-a.	Content of build.json for XCode versions less than XCode 8. 
+a.	Content of `build.json` for XCode versions less than XCode 8. 
 i.	Search for the UUID in opened provisioning profile. Copy the hexadecimal format ID in the <string> tag following UUID and paste it to the respective places as shown in the following content.
 ```	
 {
@@ -120,11 +119,12 @@ Get more details for the following content at cordova support for XCode 8 and gr
 #### 5.	Download deliver and fastlane tools 
 
 (https://docs.fastlane.tools/getting-started/ios/setup) and set up for your project. 
-a.	Install fastlane - sudo gem install fastlane
-b.	Install x-code command line tool – xcode-select --install
-c.	Initialize fastlane and deliver - fastlane deliver init
+a.	Install fastlane - `sudo gem install fastlane`
+b.	Install x-code command line tool – `xcode-select --install`
+c.	Initialize fastlane and deliver - `fastlane deliver init`
 
 Once you are done with this setup you will have a file in your project which should be similar to the following.
+```
 ###################### More Options ######################
 # If you want to have even more control, check out the documentation
 # https://github.com/fastlane/fastlane/blob/master/deliver/Deliverfile.md
@@ -135,7 +135,7 @@ Once you are done with this setup you will have a file in your project which sho
 
 app_identifier "<your application Bundle Identifier>" # The bundle identifier of your app
 username "<Some apple developer user name>" # your Apple ID user
-
+```
 
 
 
@@ -153,10 +153,10 @@ gulp --release --iosBuild
 
 ▪	This file will help you create iOS build with development provisioning profiles for testing purpose. 
 
-▪	DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )" denotes the directory where bash file is present.
-▪	 cd $DIR changes current directory to bash file's directory.
-▪	cd .. changes the directory to parent directory of bash file's directory
-▪	gulp --release --iosBuild runs the build process and generates the code in 'www' directory and executes the command ionic cordova build ios which creates the ionic build for testing.
+▪	`DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"` denotes the directory where bash file is present.
+▪	`cd $DIR` changes current directory to bash file's directory.
+▪	`cd ..` changes the directory to parent directory of bash file's directory
+▪	`gulp --release --iosBuild` runs the build process and generates the code in 'www' directory and executes the command ionic cordova build ios which creates the ionic build for testing.
 		
 b.	<Project_Name>_IPA.sh
 ```
@@ -170,12 +170,12 @@ gulp --release --ipa
 
 ▪	Before you click this, make sure you have distribution provisioning profile set manually in XCode 8 or greater, for Xcode 7 we have already added entry of provisioning profile in build.json so no changes required in the Xcode settings. 
 
-▪	DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )" denotes the directory where bash file is present.
-▪	 cd $DIR changes current directory to bash file's directory.
-▪	cd .. changes the directory to parent directory of bash file's directory.
-▪	gulp --release --ipa runs the build process and generates the code in 'www' directory and executes the command cordova build ios --device --release which creates the iOS IPA file and copies it to today’s date folder.
+▪	`DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"` denotes the directory where bash file is present.
+▪	`cd $DIR` changes current directory to bash file's directory.
+▪	`cd ..` changes the directory to parent directory of bash file's directory.
+▪	`gulp --release --ipa` runs the build process and generates the code in 'www' directory and executes the command `cordova build ios --device --release` which creates the iOS IPA file and copies it to today’s date folder.
 
-▪	It will show a notification popup once the IPA is ready or will return error if any. --svn flag will state if project should be updated before deploying the build.
+▪	It will show a notification popup once the IPA is ready or will return error if any. `--svn` flag will state if project should be updated before deploying the build.
 
 c.	<Project_Name>_Deploy.sh
 ```
@@ -191,12 +191,12 @@ gulp --release --iosDeploy
 
 ▪	After verifying your XCode settings, plist file entries and version of application. You may double click it and leave it for a while (It might take 10-15 mins). 
 
-▪	DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )" denotes the directory where bash file is present.
-▪	 cd $DIR changes current directory to bash file's directory.
-▪	cd .. changes the directory to parent directory of bash file's directory.
-▪	gulp --release --iosDeploy runs the build process and generates the code in 'www' directory and executes commands cordova build ios --device --release & fastlane deliver --ipa IPA_PATH --skip_metadata true --skip_screenshots true --force true which create the iOS IPA file and deploy it to Testflight.
+▪	`DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"` denotes the directory where bash file is present.
+▪	`cd $DIR` changes current directory to bash file's directory.
+▪	`cd ..` changes the directory to parent directory of bash file's directory.
+▪	`gulp --release --iosDeploy` runs the build process and generates the code in 'www' directory and executes commands cordova build ios --device --release` & `fastlane deliver --ipa IPA_PATH --skip_metadata true --skip_screenshots true --force true` which create the iOS IPA file and deploy it to Testflight.
 
-▪	It will show a notification popup once the deployment is done or will return error if any. --svn flag will state if project should be updated before deploying the build.
+▪	It will show a notification popup once the deployment is done or will return error if any. `--svn` flag will state if project should be updated before deploying the build.
 
 
 d.	<Project_Name>_Dev_Build.sh
@@ -208,12 +208,12 @@ cd ..
 gulp --iosBuild
 ```
 
-▪	DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )" denotes the directory where bash file is present.
-▪	cd $DIR changes current directory to bash file's directory.
-▪	cd .. changes the directory to parent directory of bash file's directory.
+▪	`DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"` denotes the directory where bash file is present.
+▪	`cd $DIR` changes current directory to bash file's directory.
+▪	`cd ..` changes the directory to parent directory of bash file's directory.
 
-▪	When “--release” flag is not passed, JS, CSS & HTML files are not minified. So, following command can serve for debugging purpose: gulp --iosBuild
-▪	gulp  --iosBuild runs the build process and generates the code in 'www' directory and executes the command ionic cordova build ios which creates the ionic build for debugging.
+▪	When `--release` flag is not passed, JS, CSS & HTML files are not minified. So, following command can serve for debugging purpose: `gulp --iosBuild`
+▪	`gulp  --iosBuild` runs the build process and generates the code in 'www' directory and executes the command `ionic cordova build ios` which creates the ionic build for debugging.
 
 Till now, we have set up the automation process for iOS deployments. Let us now set up the automation process for packaging Android APK as well.
 
@@ -287,9 +287,9 @@ cmd.exe
 ```
 •	This bat file runs the application on device if it is connected to computer and USB debugging is active in the device.
 
-•	cd /d %~dp0..  changes the directory to the directory where bat file is present and goes to its parent directory
+•	`cd /d %~dp0..`  changes the directory to the directory where bat file is present and goes to its parent directory
 
-•	gulp --androidRun runs the build process and generates the code in 'www' directory and executes the command ionic cordova run android which runs the application on the device for debugging.
+•	`gulp --androidRun` runs the build process and generates the code in 'www' directory and executes the command ionic cordova run android which runs the application on the device for debugging.
 
 b)	<Project_Name> Signed APK.bat
 ```
@@ -299,9 +299,9 @@ cmd.exe
 ```
 ◦	This bat file runs the complete build process and generates the signed APK which will be ready for delivery on play store.
 
-◦	cd /d %~dp0..  changes the directory to the directory where bat file is present and goes to its parent directory
+◦	`cd /d %~dp0..`  changes the directory to the directory where bat file is present and goes to its parent directory
 
-◦	gulp --release --signedAPK runs the build process and generates the code in 'www' directory and executes the command cordova build android --release --buildConfig which creates signed APK using keystore mentioned in the file build.json
+◦	`gulp --release --signedAPK` runs the build process and generates the code in 'www' directory and executes the command `cordova build android --release --buildConfig` which creates signed APK using keystore mentioned in the file build.json
 
 ◦	It displays a notification popup once the APK is ready
 
